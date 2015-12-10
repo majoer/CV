@@ -14,7 +14,7 @@ const AggregatedCVTopic = Component('CollapsibleCVTopic', ({cursor, title, aggre
             subTopics.push(test);
             result.push(<CVTopicHeader key={'topic-' + id} title={test} subHeader={true}/>);
         }
-        result.push(<CVEntry key={'entry' + id} cursor={entry}/>);
+        result.push(<CVEntry key={'entry' + id} cursor={entry} aggregated={true}/>);
     });
 
     return <div>

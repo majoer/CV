@@ -1,9 +1,12 @@
 import React from 'react';
 import Component from 'omniscient';
 
-let CVEntry = Component('CVEntry', ({cursor}) => {
+let CVEntry = Component('CVEntry', ({cursor, aggregated}) => {
     let result = [];
-    let header = cursor.get('org') != null ? cursor.get('org') + ',' : '';
+    let header = '';
+    if(!aggregated) {
+      header = cursor.get('org') + ', ';
+    }
     header += cursor.get('title');
 
     cursor.get('descriptions').forEach((entry, id) => {
