@@ -15,7 +15,7 @@ let CVEntry = Component('CVEntry', ({cursor}) => {
             <tbody>
                 <tr className='headline'>
                     <td>{cursor.get('from_date')}-{cursor.get('to_date')}</td>
-                    <td>{header + cursor.get('title')}</td>
+                    <td>{header}</td>
                 </tr>
                 <tr>
                     <td className='field'>{cursor.get('field')}</td>
