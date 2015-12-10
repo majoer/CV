@@ -2,7 +2,8 @@
     "cv_title": "Curriculum Vitae Mats Jørgensen",
     "profile": {
         "personalia": {
-            "name": "Mats Jørgensen",
+            "first_name": "Mats",
+            "last_name": "Jørgensen",
             "birth_date": "09.08.1991",
             "gender": "Mann",
             "relationship_status": "Ugift",
