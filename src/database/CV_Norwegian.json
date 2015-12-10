@@ -1,0 +1,249 @@
+{
+    "cv_title": "Curriculum Vitae Mats Jørgensen",
+    "profile": {
+        "personalia": {
+            "name": "Mats Jørgensen",
+            "birth_date": "09.08.1991",
+            "gender": "Mann",
+            "relationship_status": "Ugift",
+            "work_status": "Ansatt"
+        },
+        "address": {
+            "road": "",
+            "postal_number": "",
+            "city": "Trondheim",
+            "country": "Norge"
+        },
+        "contact": {
+            "mobile_phone": "",
+            "e_mail": ""
+        },
+        "languages": [ {
+            "language": "Norsk",
+            "level": "Morsmål"
+        }, {
+            "language": "Engelsk",
+            "level": "Sterk skriftlig og muntlig"
+        } ],
+        "licences": [ "B, A2" ]
+    },
+    "key_qualifications": "Hardtarbeidende, pålitelig og tilpasningsdyktig dataingeniør med gode kunnskaper innen systemutvikling med Java, databasedesign, nettverksarkitektur og -design. Spesialisert i systemutvikling av tjenester gjennom brukersentrert design.",
+    "knowledge": [ {
+        "field": "Objektorientert systemutvikling",
+        "desc": "Bred erfaring med Java. Behersker C++."
+    }, {
+        "field": "Teknologier",
+        "desc": "Java EE, Java RMI, Android, OpenGL."
+    }, {
+        "field": "Distribuerte systemer",
+        "desc": "Utvikling av tjenester og distribuerte systemer/sanntidssystemer."
+    }, {
+        "field": "Databaser",
+        "desc": "Design, modellering og SQL."
+    }, {
+        "field": "Metodikk",
+        "desc": "Brukersentrert utvikling og SCRUM."
+    }, {
+        "field": "Operativsystemer",
+        "desc": ""
+    }, {
+        "field": "",
+        "desc": "Windows, Linux og OS X"
+    }, {
+        "field": "Verktøy",
+        "desc": "NetBeans, Eclipse og IntelliJ"
+    }, {
+        "field": "Annet",
+        "desc": "Selvadapterende systemer, programvare- og informasjonssikkerhet."
+    } ],
+    "educations": [ {
+        "from_date": "08/2013",
+        "to_date": "06/2015",
+        "field": "Data og Internett",
+        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "title": "Mastergrad Telematikk",
+        "descriptions": [
+            "Studieretning: Tjenester og systemutvikling",
+            "Eksperter i Team"
+        ]
+    }, {
+        "from_date": "08/2010",
+        "to_date": "06/2013",
+        "field": "Data og Internett",
+        "org": "Høgskolen i Sør-Trøndelag",
+        "title": "Bachelor i Ingeniørfag",
+        "descriptions": [
+            "Studieretning: Nettverksarkitektur og –design"
+        ]
+    }, {
+        "from_date": "08/2007",
+        "to_date": "06/2010",
+        "field": "Allmennfag",
+        "org": "Brønnøysund Videregående Skole",
+        "title": "Realfag",
+        "descriptions": [
+            "Matte R1 og R2",
+            "Fysikk 1 og 2",
+            "Kjemi 1",
+            "Engelsk"
+        ]
+    } ],
+    "work_experiences": [ {
+        "from_date": "10/2015",
+        "to_date": "Nå",
+        "field": "Systemutvikling",
+        "org": "Bekk Consulting AS",
+        "title": "Konsulent",
+        "descriptions": [
+            "HTML5 og CSS",
+            "JavaScript (Node.js og React.js)",
+            "Spring Boot og Jenkins"
+        ]
+    }, {
+        "from_date": "06/2015",
+        "to_date": "08/2015",
+        "field": "Jordbruk",
+        "org": "Torghatten Samdrift DA",
+        "title": "Avløser",
+        "descriptions": [
+            "Gårdsarbeider, sommerjobb og tilkalling."
+        ]
+    }, {
+        "from_date": "06/2014",
+        "to_date": "08/2014",
+        "field": "Økonomi, regnskap",
+        "org": "Brønnøysundsregistrene",
+        "title": "Ferievikar",
+        "descriptions": [
+            "Ferievikar, manuell registrering av årsregnskap ved regnskapsregisteret."
+        ]
+    }, {
+        "from_date": "06/2013",
+        "to_date": "08/2013",
+        "field": "Jordbruk",
+        "org": "Torghatten Samdrift DA",
+        "title": "Avløser",
+        "descriptions": [
+            "Gårdsarbeider, sommerjobb og tilkalling."
+        ]
+    }, {
+        "from_date": "06/2012",
+        "to_date": "08/2012",
+        "field": "Økonomi, regnskap",
+        "org": "Brønnøysundsregistrene",
+        "title": "Ferievikar",
+        "descriptions": [
+            "Ferievikar, manuell registrering av årsregnskap ved regnskapsregisteret."
+        ]
+    }, {
+        "from_date": "06/2011",
+        "to_date": "08/2011",
+        "field": "Økonomi, regnskap",
+        "org": "Brønnøysundsregistrene",
+        "title": "Ferievikar",
+        "descriptions": [
+            "Ferievikar, manuell registrering av årsregnskap ved regnskapsregisteret."
+        ]
+    } ],
+    "projects": [ {
+        "from_date": "01/2015",
+        "to_date": "06/2015",
+        "field": "Masteroppgave",
+        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "title": "Kontekst-bevisst system for håndtering av avbrudd i kliniske miljø: Design og evaluering gjennom en brukersentrert tilnærming",
+        "descriptions": []
+    }, {
+        "from_date": "08/2014",
+        "to_date": "12/2014",
+        "field": "Pilotstudie/prosjekt",
+        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "title": "Et kontekst-sensitivt vidstrakt pasientalarmsystem",
+        "descriptions": []
+    }, {
+        "from_date": "08/2014",
+        "to_date": "01/2014",
+        "field": "Skoleprosjekt",
+        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "title": "Audio-visuelt, selvadapterende, hjemmeautomasjonssystem",
+        "descriptions": []
+    }, {
+        "from_date": "01/2014",
+        "to_date": "05/2014",
+        "field": "Eksperter i Team",
+        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "title": "Gi Bort Dagen Frivillighetsportal",
+        "descriptions": [
+            "PHP prototype for frivillighetsorganisasjon."
+        ]
+    }, {
+        "from_date": "02/2013",
+        "to_date": "06/2013",
+        "field": "Bacheloroppgave",
+        "org": "Høgskolen i Sør-Trøndelag",
+        "title": "Distribuert system av Mini-PCer mot PointGrey videokameraer. Utviklet vha. Java og C++",
+        "descriptions": []
+    }, {
+        "from_date": "08/2012",
+        "to_date": "01/2013",
+        "field": "Skoleprosjekt",
+        "org": "Høgskolen i Sør-Trøndelag",
+        "title": "NAS programvare",
+        "descriptions": [
+            "Java applikasjon – NAS programvare."
+        ]
+    }, {
+        "from_date": "01/2012",
+        "to_date": "05/2012",
+        "field": "Skoleprosjekt",
+        "org": "Høgskolen i Sør-Trøndelag",
+        "title": "Elektronisk håndtering for utleie av sportsutstyr",
+        "descriptions": [
+            "Java EE applikasjon for nettbutikk."
+        ]
+    }, {
+        "from_date": "01/2011",
+        "to_date": "05/2011",
+        "field": "Skoleprosjekt",
+        "org": "Høgskolen i Sør-Trøndelag",
+        "title": "Sjakk",
+        "descriptions": [
+            "Java spill - Sjakk."
+        ]
+    }, {
+        "from_date": "08/2010",
+        "to_date": "12/2010",
+        "field": "Skoleprosjekt",
+        "org": "Høgskolen i Sør-Trøndelag",
+        "title": "Fjernstyrt Gaffeltruck",
+        "descriptions": [
+            "Java applikasjon - Lego Mindstorms robotikk"
+        ]
+    }, {
+        "from_date": "2014",
+        "to_date": "Nå",
+        "field": "",
+        "org": "Selvstendig Prosjekt",
+        "title": "Weight Manager",
+        "descriptions": [
+            "Java applikasjon – Personlig vektanalyse."
+        ]
+    }, {
+        "from_date": "2013",
+        "to_date": "Nå",
+        "field": "",
+        "org": "Selvstendig Prosjekt",
+        "title": "EasyLanTransfer",
+        "descriptions": [
+            "Java applikasjon – Enkel filoverføring via lokalnett."
+        ]
+    }, {
+        "from_date": "2013",
+        "to_date": "Nå",
+        "field": "",
+        "org": "Selvstendig Prosjekt",
+        "title": "Klats Engine",
+        "descriptions": [
+            "Android – Spillmotor (OpenGL, 3d modeller og animasjon)."
+        ]
+    } ]
+}
