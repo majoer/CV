@@ -14,7 +14,7 @@ let CVEntry = Component('CVEntry', ({cursor}) => {
         <table className="entry">
             <tbody>
                 <tr className='headline'>
-                    <td>{cursor.get('fromDate')}-{cursor.get('toDate')}</td>
+                    <td>{cursor.get('from_date')}-{cursor.get('to_date')}</td>
                     <td>{header + cursor.get('title')}</td>
                 </tr>
                 <tr>
