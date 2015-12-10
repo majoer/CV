@@ -1,4 +1,5 @@
 nbproject/
 relics/
+node_modules/
 src/web/static/bundle.js
 src/web/static/bundle.css
