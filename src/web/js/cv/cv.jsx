@@ -15,7 +15,7 @@ const ReactCV = Component('ReactCV', ({cursor}) => {
 
     return (
         <div>
-          <PersonaliaColumn cursor={cursor.get('profile')}/>
+          <PersonaliaColumn cursor={cursor}/>
             <div className="cv">
                 <h1>{cursor.get('cv_title')}</h1>
                 <CVTopic cursor={cursor.get('educations')} title='Utdanning'/>
