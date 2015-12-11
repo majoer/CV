@@ -17,7 +17,19 @@
         },
         "contact": {
             "mobile_phone": "",
-            "e_mail": ""
+            "e_mail": "",
+            "networks": [ {
+                "name": "Home Page",
+                "url": "http://matsjorgensen.no"
+            }, {
+                "name": "Github",
+                "url": "www.github.com",
+                "profile": "/majoer"
+            }, {
+                "name": "LinkedIn",
+                "url": "www.linkedin.com",
+                "profile": ""
+            } ]
         },
         "languages": [ {
             "language": "Norsk",
