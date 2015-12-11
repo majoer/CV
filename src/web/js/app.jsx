@@ -12,15 +12,8 @@ const data = immstruct({
 
 const App = React.createClass({
   render: function() {
-    return <div className="navigation">
-        <ul>
-          <li>
-            <Link to="/">Curriculum Vitae</Link>
-          </li>
-        </ul>
-        <div className="content">
+    return <div className="content">
           {this.props.children}
-        </div>
       </div>;
   }
 });

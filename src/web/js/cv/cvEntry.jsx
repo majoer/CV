@@ -1,7 +1,7 @@
 import React from 'react';
 import Component from 'omniscient';
 
-let CVEntry = Component('CVEntry', ({cursor, aggregated}) => {
+const CVEntry = Component('CVEntry', ({cursor, aggregated}) => {
     let result = [];
     let header = '';
     if(!aggregated) {

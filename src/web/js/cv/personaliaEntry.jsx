@@ -1,7 +1,7 @@
 import React from 'react';
 import Component from 'omniscient';
 
-let PersonaliaEntry = Component('PersonaliaEntry', ({cursor, title}) => {
+const PersonaliaEntry = Component('PersonaliaEntry', ({cursor, title}) => {
     let result = [];
 
     cursor.forEach((entry, id) => {

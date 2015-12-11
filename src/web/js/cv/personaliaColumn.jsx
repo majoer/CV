@@ -2,16 +2,20 @@ import React from 'react';
 import Component from 'omniscient';
 import PersonaliaEntry from './personaliaEntry.jsx';
 
-let PersonaliaColumn = Component('PersonaliaColumn', ({cursor}) => {
-    return (
-        <div className='personaliaColumn'>
-            <img className='profilePicture' src='img/color.jpg' width="160px"/>
-              <PersonaliaEntry title='Adresse' cursor={cursor.get('address')}/>
-              <PersonaliaEntry title='Kontaktinformasjon' cursor={cursor.get('contact')}/>
-              <PersonaliaEntry title='Fødselsdato' cursor={cursor.get('personalia').cursor('birth_date')}/>
-              <PersonaliaEntry title='Språk' cursor={cursor.get('languages')}/>
-        </div>
-    );
+const PersonaliaColumn = Component('PersonaliaColumn', ({cursor}) => {
+
+    const personalia = cursor.get('personalia');
+
+    return <div className='personaliaColumn'>
+
+        <h1>{personalia.get('first_name')}</h1>
+        <h2>{personalia.get('last_name')}</h2>
+
+
+        <img className='profilePicture' src='img/grayscale1.jpg' width="160px" height="160"/>
+
+
+    </div>;
 });
 
 export default PersonaliaColumn;
