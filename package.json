@@ -4,7 +4,9 @@
     "build-css": "lessc src/web/less/style.less src/web/static/bundle.css && npm run preprocess:autoprefixer",
     "watch-css": "nodemon -q -I -w src/web/less --ext less --exec npm run build-css",
     "watch-js": "webpack -w",
-    "watch": "npm run watch-js & npm run watch-css"
+    "rest": "node src/server.js",
+    "watch": "npm run rest & npm run watch-js & npm run watch-css",
+    "watch-cyg":"cygstart npm run rest & cygstart npm run watch-js & cygstart npm run watch-css"
   },
   "name": "cv",
   "version": "1.0.0",
