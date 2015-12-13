@@ -38,7 +38,8 @@
             "language": "Engelsk",
             "level": "Sterk skriftlig og muntlig"
         } ],
-        "licences": [ "B, A2" ]
+        "licences": [ "B, A2" ],
+        "interests": []
     },
     "key_qualifications": "Hardtarbeidende, pålitelig og tilpasningsdyktig dataingeniør med gode kunnskaper innen systemutvikling med Java, databasedesign, nettverksarkitektur og -design. Spesialisert i systemutvikling av tjenester gjennom brukersentrert design.",
     "knowledge": [ {
@@ -63,12 +64,16 @@
         "field": "",
         "desc": "Windows, Linux og OS X"
     }, {
-        "field": "Verktøy",
-        "desc": "NetBeans, Eclipse og IntelliJ"
-    }, {
         "field": "Annet",
         "desc": "Selvadapterende systemer, programvare- og informasjonssikkerhet."
     } ],
+    "skills": [
+    ],
+    "software": [
+        "NetBeans",
+        "Eclipse",
+        "IntelliJ"
+    ],
     "educations": [ {
         "from_date": "08/2013",
         "to_date": "06/2015",
