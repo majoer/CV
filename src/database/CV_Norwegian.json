@@ -73,7 +73,7 @@
         "from_date": "08/2013",
         "to_date": "06/2015",
         "field": "Data og Internett",
-        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "org": "NTNU",
         "title": "Mastergrad Telematikk",
         "location": {
             "city": "Trondheim"
@@ -86,7 +86,7 @@
         "from_date": "08/2010",
         "to_date": "06/2013",
         "field": "Data og Internett",
-        "org": "Høgskolen i Sør-Trøndelag",
+        "org": "HIST",
         "title": "Bachelor i Ingeniørfag",
         "location": {
             "city": "Trondheim"
@@ -189,7 +189,7 @@
         "from_date": "01/2015",
         "to_date": "06/2015",
         "field": "Masteroppgave",
-        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "org": "NTNU",
         "title": "Kontekst-bevisst system for håndtering av avbrudd i kliniske miljø: Design og evaluering gjennom en brukersentrert tilnærming",
         "location": {
             "city": "Trondheim"
@@ -199,7 +199,7 @@
         "from_date": "08/2014",
         "to_date": "12/2014",
         "field": "Pilotstudie/prosjekt",
-        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "org": "NTNU",
         "title": "Et kontekst-sensitivt vidstrakt pasientalarmsystem",
         "location": {
             "city": "Trondheim"
@@ -209,7 +209,7 @@
         "from_date": "08/2014",
         "to_date": "01/2014",
         "field": "Skoleprosjekt",
-        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "org": "NTNU",
         "title": "Audio-visuelt, selvadapterende, hjemmeautomasjonssystem",
         "location": {
             "city": "Trondheim"
@@ -219,7 +219,7 @@
         "from_date": "01/2014",
         "to_date": "05/2014",
         "field": "Eksperter i Team",
-        "org": "Norges teknisk-naturvitenskapelige universitet",
+        "org": "NTNU",
         "title": "Gi Bort Dagen Frivillighetsportal",
         "location": {
             "city": "Trondheim"
@@ -231,7 +231,7 @@
         "from_date": "02/2013",
         "to_date": "06/2013",
         "field": "Bacheloroppgave",
-        "org": "Høgskolen i Sør-Trøndelag",
+        "org": "HIST",
         "title": "Distribuert system av Mini-PCer mot PointGrey videokameraer. Utviklet vha. Java og C++",
         "location": {
             "city": "Trondheim"
@@ -241,7 +241,7 @@
         "from_date": "08/2012",
         "to_date": "01/2013",
         "field": "Skoleprosjekt",
-        "org": "Høgskolen i Sør-Trøndelag",
+        "org": "HIST",
         "title": "NAS programvare",
         "location": {
             "city": "Trondheim"
@@ -253,7 +253,7 @@
         "from_date": "01/2012",
         "to_date": "05/2012",
         "field": "Skoleprosjekt",
-        "org": "Høgskolen i Sør-Trøndelag",
+        "org": "HIST",
         "title": "Elektronisk håndtering for utleie av sportsutstyr",
         "location": {
             "city": "Trondheim"
@@ -265,7 +265,7 @@
         "from_date": "01/2011",
         "to_date": "05/2011",
         "field": "Skoleprosjekt",
-        "org": "Høgskolen i Sør-Trøndelag",
+        "org": "HIST",
         "title": "Sjakk",
         "location": {
             "city": "Trondheim"
@@ -277,7 +277,7 @@
         "from_date": "08/2010",
         "to_date": "12/2010",
         "field": "Skoleprosjekt",
-        "org": "Høgskolen i Sør-Trøndelag",
+        "org": "HIST",
         "title": "Fjernstyrt Gaffeltruck",
         "location": {
             "city": "Trondheim"
