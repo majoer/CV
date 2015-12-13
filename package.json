@@ -6,7 +6,7 @@
     "watch-js": "webpack -w",
     "rest": "node src/server.js",
     "watch": "npm run rest & npm run watch-js & npm run watch-css",
-    "watch-cyg":"cygstart npm run rest & cygstart npm run watch-js & cygstart npm run watch-css"
+    "watch-cyg": "cygstart npm run rest & cygstart npm run watch-js & cygstart npm run watch-css"
   },
   "name": "cv",
   "version": "1.0.0",
@@ -24,6 +24,7 @@
     "immstruct": "^2.0.0",
     "immutable": "^3.7.5",
     "json-loader": "^0.5.4",
+    "moment": "^2.10.6",
     "omnipotent": "^1.2.1",
     "omniscient": "^4.1.1",
     "qwest": "^2.2.4",
