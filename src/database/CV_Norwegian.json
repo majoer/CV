@@ -75,6 +75,9 @@
         "field": "Data og Internett",
         "org": "Norges teknisk-naturvitenskapelige universitet",
         "title": "Mastergrad Telematikk",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Studieretning: Tjenester og systemutvikling",
             "Eksperter i Team"
@@ -85,6 +88,9 @@
         "field": "Data og Internett",
         "org": "Høgskolen i Sør-Trøndelag",
         "title": "Bachelor i Ingeniørfag",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Studieretning: Nettverksarkitektur og –design"
         ]
@@ -94,6 +100,9 @@
         "field": "Allmennfag",
         "org": "Brønnøysund Videregående Skole",
         "title": "Realfag",
+        "location": {
+            "city": "Brønnøysund"
+        },
         "descriptions": [
             "Matte R1 og R2",
             "Fysikk 1 og 2",
@@ -107,6 +116,9 @@
         "field": "Systemutvikling",
         "org": "Bekk Consulting AS",
         "title": "Konsulent",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "HTML5 og CSS",
             "JavaScript (Node.js og React.js)",
@@ -118,6 +130,9 @@
         "field": "Jordbruk",
         "org": "Torghatten Samdrift DA",
         "title": "Avløser",
+        "location": {
+            "city": "Brønnøysund"
+        },
         "descriptions": [
             "Gårdsarbeider, sommerjobb og tilkalling."
         ]
@@ -127,6 +142,9 @@
         "field": "Økonomi, regnskap",
         "org": "Brønnøysundsregistrene",
         "title": "Ferievikar",
+        "location": {
+            "city": "Brønnøysund"
+        },
         "descriptions": [
             "Ferievikar, manuell registrering av årsregnskap ved regnskapsregisteret."
         ]
@@ -136,6 +154,9 @@
         "field": "Jordbruk",
         "org": "Torghatten Samdrift DA",
         "title": "Avløser",
+        "location": {
+            "city": "Brønnøysund"
+        },
         "descriptions": [
             "Gårdsarbeider, sommerjobb og tilkalling."
         ]
@@ -145,6 +166,9 @@
         "field": "Økonomi, regnskap",
         "org": "Brønnøysundsregistrene",
         "title": "Ferievikar",
+        "location": {
+            "city": "Brønnøysund"
+        },
         "descriptions": [
             "Ferievikar, manuell registrering av årsregnskap ved regnskapsregisteret."
         ]
@@ -154,6 +178,9 @@
         "field": "Økonomi, regnskap",
         "org": "Brønnøysundsregistrene",
         "title": "Ferievikar",
+        "location": {
+            "city": "Brønnøysund"
+        },
         "descriptions": [
             "Ferievikar, manuell registrering av årsregnskap ved regnskapsregisteret."
         ]
@@ -164,6 +191,9 @@
         "field": "Masteroppgave",
         "org": "Norges teknisk-naturvitenskapelige universitet",
         "title": "Kontekst-bevisst system for håndtering av avbrudd i kliniske miljø: Design og evaluering gjennom en brukersentrert tilnærming",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": []
     }, {
         "from_date": "08/2014",
@@ -171,6 +201,9 @@
         "field": "Pilotstudie/prosjekt",
         "org": "Norges teknisk-naturvitenskapelige universitet",
         "title": "Et kontekst-sensitivt vidstrakt pasientalarmsystem",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": []
     }, {
         "from_date": "08/2014",
@@ -178,6 +211,9 @@
         "field": "Skoleprosjekt",
         "org": "Norges teknisk-naturvitenskapelige universitet",
         "title": "Audio-visuelt, selvadapterende, hjemmeautomasjonssystem",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": []
     }, {
         "from_date": "01/2014",
@@ -185,6 +221,9 @@
         "field": "Eksperter i Team",
         "org": "Norges teknisk-naturvitenskapelige universitet",
         "title": "Gi Bort Dagen Frivillighetsportal",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "PHP prototype for frivillighetsorganisasjon."
         ]
@@ -194,6 +233,9 @@
         "field": "Bacheloroppgave",
         "org": "Høgskolen i Sør-Trøndelag",
         "title": "Distribuert system av Mini-PCer mot PointGrey videokameraer. Utviklet vha. Java og C++",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": []
     }, {
         "from_date": "08/2012",
@@ -201,6 +243,9 @@
         "field": "Skoleprosjekt",
         "org": "Høgskolen i Sør-Trøndelag",
         "title": "NAS programvare",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Java applikasjon – NAS programvare."
         ]
@@ -210,6 +255,9 @@
         "field": "Skoleprosjekt",
         "org": "Høgskolen i Sør-Trøndelag",
         "title": "Elektronisk håndtering for utleie av sportsutstyr",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Java EE applikasjon for nettbutikk."
         ]
@@ -219,6 +267,9 @@
         "field": "Skoleprosjekt",
         "org": "Høgskolen i Sør-Trøndelag",
         "title": "Sjakk",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Java spill - Sjakk."
         ]
@@ -228,6 +279,9 @@
         "field": "Skoleprosjekt",
         "org": "Høgskolen i Sør-Trøndelag",
         "title": "Fjernstyrt Gaffeltruck",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Java applikasjon - Lego Mindstorms robotikk"
         ]
@@ -237,6 +291,9 @@
         "field": "",
         "org": "Selvstendig Prosjekt",
         "title": "Weight Manager",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Java applikasjon – Personlig vektanalyse."
         ]
@@ -246,6 +303,9 @@
         "field": "",
         "org": "Selvstendig Prosjekt",
         "title": "EasyLanTransfer",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Java applikasjon – Enkel filoverføring via lokalnett."
         ]
@@ -255,6 +315,9 @@
         "field": "",
         "org": "Selvstendig Prosjekt",
         "title": "Klats Engine",
+        "location": {
+            "city": "Trondheim"
+        },
         "descriptions": [
             "Android – Spillmotor (OpenGL, 3d modeller og animasjon)."
         ]
