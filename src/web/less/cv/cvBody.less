@@ -1,59 +1,88 @@
-.cvBody {
+.cv {
   position: absolute;
   left: 290px;
   top: 0;
-  width: 745px;
+  width: 740px;
   height: 100%;
+  overflow: hidden;
   word-wrap: break-word;
   box-sizing: border-box;
   border: 1px solid black;
 }
-
+.cv-footer {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.cv-footer-skills {
+  float: left;
+  width: 450px;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.cv-footer-interests {
+  float: right;
+  width: 200px;
+  box-sizing: border-box;
+  border: 1px solid green;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
 .cv-header {
   display: inline;
 }
-
+.cv-header {
+  width: 100%;
+}
 .cv-header-line {
-  float: right;
   border-bottom: 1px solid black;
-  width: 680px;
+  width: 100%;
   padding-top: 10px;
-  margin-right: 20px;
   margin-bottom: 2em;
 }
 .cv-header-icon {
   float: left;
 }
-
-.cv-topic {
+.cv-topic {}
+.cv-simpleTopic {
+  width: 130px;
+  float: left;
+  margin-right: 30px;
+}
+.cv-simpleTopic h2 {
+  vertical-align: top;
+  padding-top: 0;
+  margin-top: 0;
 }
 
+.cv-simpleTopic ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.cv-simpleTopic li {
+  overflow: hidden;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
 .cv-entry {
   width: 125px;
   margin-right: 45px;
   box-sizing: border-box;
   border: 1px solid red;
 }
-
 .cv-entry-title {
   padding: 0;
   margin: 0;
 }
-
 .cv-entry-org {
   padding: 0;
   margin: 0;
-  color: #A2BC13  ;
+  color: #A2BC13;
 }
-
-.cv-entry-city {
-
-}
-
-.cv-entry-date {
-
-}
-
+.cv-entry-city {}
+.cv-entry-date {}
 .cv-entry-description {
   height: 100%;
   width: 100%;

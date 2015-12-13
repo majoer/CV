@@ -29,3 +29,7 @@ ReactDOM.render((
     </Route>
   </Router>
 ), document.querySelector('#app'));
+
+String.prototype.capitalizeFirstLetter = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}

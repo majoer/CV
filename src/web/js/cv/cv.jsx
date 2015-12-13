@@ -3,7 +3,7 @@ import Component from 'omniscient';
 import Get from '../data-request';
 import PersonaliaColumn from './personaliaColumn.jsx';
 import CVTopic from './cvTopic.jsx';
-import AggregatedCVTopic from './aggregatedCVTopic.jsx';
+import SimpleCVTopic from './SimpleCVTopic.jsx';
 
 const ReactCV = Component('ReactCV', ({cursor}) => {
     if (cursor.size == null) {
@@ -15,11 +15,14 @@ const ReactCV = Component('ReactCV', ({cursor}) => {
 
     return (
         <div>
-          <PersonaliaColumn cursor={cursor}/>
-            <div className="cvBody">
+            <PersonaliaColumn cursor={cursor}/>
+            <div className="cv">
                 <CVTopic cursor={cursor.get('educations')}/>
                 <CVTopic cursor={cursor.get('work_experiences')}/>
-                <CVTopic cursor={cursor.get('projects')}/>
+                <div className="cv-footer">
+                    <SimpleCVTopic className="cv-footer-skills" cursor={cursor} extract={["skills", 'software']}/>
+                    <SimpleCVTopic className="cv-footer-interests" cursor={cursor.get('profile')} extract={["interests"]}/>
+                </div>
             </div>
         </div>
     )
