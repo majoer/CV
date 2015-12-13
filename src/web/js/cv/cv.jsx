@@ -16,11 +16,10 @@ const ReactCV = Component('ReactCV', ({cursor}) => {
     return (
         <div>
           <PersonaliaColumn cursor={cursor}/>
-            <div className="cv">
-                <h1>{cursor.get('cv_title')}</h1>
-                <CVTopic cursor={cursor.get('educations')} title='Utdanning'/>
-                <CVTopic cursor={cursor.get('work_experiences')} title='Arbeidserfaring'/>
-                <AggregatedCVTopic cursor={cursor.get('projects')} title='Prosjekter' aggregatedBy='org'/>
+            <div className="cvBody">
+                <CVTopic cursor={cursor.get('educations')}/>
+                <CVTopic cursor={cursor.get('work_experiences')}/>
+                <CVTopic cursor={cursor.get('projects')}/>
             </div>
         </div>
     )

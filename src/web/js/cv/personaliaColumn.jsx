@@ -17,17 +17,9 @@ const SocialNetwork = Component('SocialNetwork', ({cursor, imgUrl}) => {
 });
 
 const PersonaliaColumn = Component('PersonaliaColumn', ({cursor}) => {
-    const viewSocialNetworks = [
-        {
-            name: 'Github',
-            url: 'github.png'
-        }
-    ];
     const profile = cursor.cursor('profile');
     const personalia = profile.get('personalia');
     const socialNetworks = profile.cursor(['contact', 'networks']);
-    console.log(socialNetworks);
-    console.log();
 
     return <div className='personaliaColumn'>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Component from 'omniscient';
-import CVTopicHeader from './cvTopicHeader.jsx';
 import CVEntry from './cvEntry.jsx';
 
 const AggregatedCVTopic = Component('CollapsibleCVTopic', ({cursor, title, aggregatedBy}) => {
