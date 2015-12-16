@@ -4,13 +4,18 @@ import Moment from 'moment';
 import CVHeader from './cvHeader.jsx';
 import CVEntry from './cvEntry.jsx';
 
-const CVTopic = Component('CVTopic', ({cursor, className, title, image, size, handleEntry}) => {
+const CVProjectTopic = Component('CVTopic', ({cursor, className, title, image, size}) => {
 
   const tableData = [];
 
   cursor.forEach((entry, i) => {
+    const toDate = entry.get('to_date');
     if(tableData.length < size) {
-      handleEntry(tableData, entry);
+      tableData.push(
+        <tr key={i}>
+            <td><CVEntry cursor={entry}/></td>
+            <td className="cv-body-entry-description"><div>{entry.get('descriptions')}</div></td>
+       </tr>);
     }
   });
 
@@ -24,4 +29,4 @@ const CVTopic = Component('CVTopic', ({cursor, className, title, image, size, ha
     </div>;
 });
 
-export default CVTopic;
+export default CVProjectTopic;
