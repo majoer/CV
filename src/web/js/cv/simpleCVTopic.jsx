@@ -4,7 +4,7 @@ import Moment from 'moment';
 import CVHeader from './cvHeader.jsx';
 import CVEntry from './cvEntry.jsx';
 
-const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className}) => {
+const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className, image}) => {
 
   const result = [];
 
@@ -15,7 +15,7 @@ const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className}) 
       });
 
       result.push(
-        <div className="cv-simpleTopic" key={'list' + i}>
+        <div className="cv-body-simpleTopic" key={'list' + i}>
           <h2 key={'h2' + i}>{title.capitalizeFirstLetter()}</h2>
           <ul>
             {list}
@@ -23,7 +23,7 @@ const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className}) 
         </div>);
     });
     return <div className={className}>
-        <CVHeader img=""/>
+        <CVHeader image={image}/>
         {result}
     </div>;
 });

@@ -4,7 +4,7 @@ import Moment from 'moment';
 import CVHeader from './cvHeader.jsx';
 import CVEntry from './cvEntry.jsx';
 
-const CVTopic = Component('CVTopic', ({cursor, title}) => {
+const CVTopic = Component('CVTopic', ({cursor, className, title, image}) => {
 
   const tableData = [];
 
@@ -14,13 +14,13 @@ const CVTopic = Component('CVTopic', ({cursor, title}) => {
       tableData.push(
         <tr key={i}>
             <td><CVEntry cursor={entry}/></td>
-            <td className="cv-entry-description"><div>{entry.get('descriptions')}</div></td>
+            <td className="cv-body-entry-description"><div>{entry.get('descriptions')}</div></td>
        </tr>);
     }
   });
 
-    return <div className='cv-topic'>
-        <CVHeader img=""/>
+    return <div className={'cv-body-topic ' + className}>
+        <CVHeader image={image}/>
         <table>
           <tbody>
             {tableData}

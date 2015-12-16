@@ -14,14 +14,14 @@ const ReactCV = Component('ReactCV', ({cursor}) => {
     }
 
     return (
-        <div>
+        <div className="cv">
             <PersonaliaColumn cursor={cursor}/>
-            <div className="cv">
-                <CVTopic cursor={cursor.get('educations')}/>
-                <CVTopic cursor={cursor.get('work_experiences')}/>
-                <div className="cv-footer">
-                    <SimpleCVTopic className="cv-footer-skills" cursor={cursor} extract={["skills", 'software']}/>
-                    <SimpleCVTopic className="cv-footer-interests" cursor={cursor.get('profile')} extract={["interests"]}/>
+            <div className="cv-body">
+                <CVTopic className="cv-body-topic-first" cursor={cursor.get('educations')} image="img/education.png"/>
+                <CVTopic cursor={cursor.get('work_experiences')} image="img/tie.png"/>
+                <div className="cv-body-footer">
+                    <SimpleCVTopic className="cv-body-footer-skills" cursor={cursor} extract={["skills", 'software']} image="img/settings.png"/>
+                    <SimpleCVTopic className="cv-body-footer-interests" cursor={cursor.get('profile')} extract={["interests"]} image="img/comments.png"/>
                 </div>
             </div>
         </div>

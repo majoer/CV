@@ -3,10 +3,12 @@ import Component from 'omniscient';
 
 export const CVHeader = Component('CVHeader', ({image}) => {
 
-  return <div className="cv-header">
-    <img className="cv-header-icon" src="img/grayscale1.jpg" width="24px" height="24px"/>
-    <div className="test"><div className="cv-header-line"/></div>
-  </div>
+    return <div className="cv-body-header">
+        <div className="cv-body-header-icon">
+            <img src={image} width="40px" height="40px"/>
+        </div>
+        <div className="cv-body-header-line"/>
+    </div>
 });
 
 export default CVHeader;
