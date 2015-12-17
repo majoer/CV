@@ -4,9 +4,11 @@ import Moment from 'moment';
 import CVHeader from './cvHeader.jsx';
 import CVEntry from './cvEntry.jsx';
 
-const CVTopic = Component('CVTopic', ({cursor, className, title, image, size, handleEntry}) => {
+const CVTopic = Component('CVTopic', ({cursor, className, title, image, size, height, handleEntry}) => {
 
   const tableData = [];
+  // const scale = downscale == undefined ? 1 : parseFloat(downscale);
+  // const height = (100 * (1 / topics) * (size / topics) * scale) + '%';
 
   cursor.forEach((entry, i) => {
     if(tableData.length < size) {
@@ -14,7 +16,8 @@ const CVTopic = Component('CVTopic', ({cursor, className, title, image, size, ha
     }
   });
 
-    return <div className={'cv-body-topic ' + className}>
+
+    return <div className={'cv-body-topic ' + className} style={{height: height}}>
         <CVHeader image={image}/>
         <table>
           <tbody>
