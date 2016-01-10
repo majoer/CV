@@ -1,19 +1,52 @@
-var express = require( 'express' );
-var app = express();
-var fs = require( 'fs' );
+const createWebhookService = require( './webhookService.js' );
+const createCVService = require( './cvService.js' );
+const exec = require( 'child_process' ).exec;
+const bodyParser = require( 'body-parser' );
+const express = require( 'express' );
+const fs = require( 'fs' );
+
+/*
+* Initialization
+*/
+
+var server;
+var properties = readProperties();
+const app = express();
+
+/*
+* Configuration
+*/
 
 app.use( express.static( 'src/web/static' ) );
+app.use( bodyParser.json() );
 
-app.get( '/cv', function( req, res ) {
-    fs.readFile( __dirname + '/database/CV_Norwegian.json', 'utf-8', function( err, data ) {
-        console.log( "Read from file!" );
-        res.type( 'json' );
-        res.send( data );
-    } );
-} );
 
-var server = app.listen( 8081, function() {
-    var host = server.address().address
-    var port = server.address().port;
-    console.log( "Started REST service at http://%s:%s", host, port );
-} );
+/*
+* Services
+*/
+
+createCVService( app );
+createWebhookService( app, properties, server );
+
+/*
+* Start Server
+*/
+
+server = startServer( properties.port );
+
+/*
+* Support methods
+*/
+
+function startServer( port ) {
+    return app.listen( port, function( req, res ) {
+        var host = server.address().address
+        var port = server.address().port;
+        console.log( "Started REST service at http://%s:%s", host, port );
+    });
+}
+
+function readProperties() {
+    var fileContents = fs.readFileSync( __dirname + '/server.conf.json');
+    return JSON.parse( fileContents );
+}

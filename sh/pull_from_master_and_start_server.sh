@@ -3,37 +3,37 @@
 # and executes server.js using Node
 
 echo 'Begin pull_from_master_and_start_server.sh'
+PARENT_PID=$1
+COUNTER=1
 
-PARENT_PID=$PPID
-counter=1
-echo "Waiting for parent process ($PARENT_PID) to close..."
-
-while [ $counter -lt 1 ]; do
-    echo "Attempt ${counter} of 10"
-
-    if [ $PARENT_PID ]
-        then
-            break
-        else
-            sleep 1
-            counter=$((counter+1))
-        fi
-done
-if [ $PARENT_PID ]
-    then
-        echo 'Parent process is still running after 10 seconds, killing it manually...'
-        kill $PARENT_PID
+if ps aux grep WINPID > /dev/null; then
+    PARENT_PID=$(ps aux | awk '{print $1, $4}' | grep $PARENT_PID | awk '{print $1}')
 fi
 
-cd ..
+if [ -n "$PARENT_PID" ]; then
+    echo "Waiting for parent process (${PARENT_PID}) to close..."
+
+    while [ ${COUNTER} -lt 11 ]; do
+        echo "Attempt ${COUNTER} of 10"
+
+        if ps -p ${PARENT_PID} > /dev/null; then
+            sleep 1
+            COUNTER=$((COUNTER+1))
+        else
+            break;
+        fi
+    done
+    if ps -p ${PARENT_PID} > /dev/null; then
+        echo 'Parent process is still running after 10 seconds, killing it manually...'
+        kill ${PARENT_PID}
+    fi
+fi
+
 echo 'Pulling from master...'
 git pull origin master
 
-echo 'Clearing node_modules'
-rm -r node_modules
-
 echo 'Installing application'
 npm install
-#
+
 echo 'Starting server'
 node src/server.js
