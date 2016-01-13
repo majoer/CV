@@ -1,4 +1,9 @@
 {
     "port": 8081,
-    "secret": "enterYourSecretHere"
+
+    "webhookServiceEnabled": true,
+    "webhookSecret": "enterYourSecretHere",
+    "sslPort": 443,
+    "keyFile": "yourKeyfilePathHere",
+    "certFile": "yourCertificateFilePathHere"
 }

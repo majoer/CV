@@ -1,3 +1,5 @@
+const fs = require( 'fs' );
+
 function createCVService( app ) {
     app.get( '/cv', function( req, res ) {
         fs.readFile( __dirname + '/database/CV_Norwegian.json', 'utf-8', function( err, data ) {

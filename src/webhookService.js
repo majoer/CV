@@ -12,7 +12,7 @@ process.on( 'exit', function() {
     }
 });
 
-function createWebhookService( app, properties, server ) {
+function createWebhookService( app, properties ) {
     app.post( '/webhook', upload.array(), function( req, res, next ) {
         const event = req.headers['x-github-event'];
         const signature = req.headers['x-hub-Signature'];

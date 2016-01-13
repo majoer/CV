@@ -1,16 +1,16 @@
 const createWebhookService = require( './webhookService.js' );
 const createCVService = require( './cvService.js' );
-const exec = require( 'child_process' ).exec;
 const bodyParser = require( 'body-parser' );
 const express = require( 'express' );
+const https = require( 'https' );
 const fs = require( 'fs' );
 
 /*
-* Initialization
+* Initialization HTTP
 */
 
-var server;
 var properties = readProperties();
+var httpServer;
 const app = express();
 
 /*
@@ -18,35 +18,74 @@ const app = express();
 */
 
 app.use( express.static( 'src/web/static' ) );
-app.use( bodyParser.json() );
-
 
 /*
 * Services
 */
 
 createCVService( app );
-createWebhookService( app, properties, server );
 
 /*
 * Start Server
 */
 
-server = startServer( properties.port );
+httpServer = startHttpServer( properties.port );
 
 /*
 * Support methods
 */
 
-function startServer( port ) {
+function startHttpServer( port ) {
     return app.listen( port, function( req, res ) {
-        var host = server.address().address
-        var port = server.address().port;
-        console.log( "Started REST service at http://%s:%s", host, port );
+        var host = httpServer.address().address
+        var port = httpServer.address().port;
+        console.log( "Started service at http://%s:%s", host, port );
     });
 }
 
 function readProperties() {
     var fileContents = fs.readFileSync( __dirname + '/server.conf.json');
     return JSON.parse( fileContents );
+}
+
+if( properties.webhookServiceEnabled ) {
+
+    /*
+    * Initialization HTTPS
+    */
+
+    const secureApp = express();
+    var httpsServer;
+
+    /*
+    * Configuration
+    */
+
+    secureApp.use( bodyParser.json() );
+
+    /*
+    * Services
+    */
+    createWebhookService( secureApp, properties );
+
+    /*
+    * Start Server
+    */
+
+    createAndStartHttpsServer( properties.sslPort, properties.keyFile, properties.certFile);
+
+    /*
+    * Support methods
+    */
+
+    function createAndStartHttpsServer ( sslPort, keyFile, certFile ) {
+        httpsServer = https.createServer( {
+            key: fs.readFileSync( keyFile ),
+            cert: fs.readFileSync( certFile )
+        }, secureApp).listen(sslPort, function( req, res ) {
+            var host = httpsServer.address().address
+            var port = httpsServer.address().port;
+            console.log( "Started service at https://%s:%s", host, port );
+        });
+    }
 }
