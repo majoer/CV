@@ -3,7 +3,7 @@
 
     "webhookServiceEnabled": true,
     "webhookSecret": "enterYourSecretHere",
-    "sslPort": 443,
+    "tlsPort": 8082,
     "keyFile": "yourKeyfilePathHere",
     "certFile": "yourCertificateFilePathHere"
 }

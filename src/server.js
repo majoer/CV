@@ -72,7 +72,7 @@ if( properties.webhookServiceEnabled ) {
     * Start Server
     */
 
-    createAndStartHttpsServer( properties.sslPort, properties.keyFile, properties.certFile);
+    createAndStartHttpsServer( properties.tlsPort, properties.keyFile, properties.certFile);
 
     /*
     * Support methods
