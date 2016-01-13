@@ -35,5 +35,8 @@ git pull origin master
 echo 'Installing application'
 npm install
 
+echo 'Building Front-End'
+npm run build
+
 echo 'Starting server'
 node src/server.js
