@@ -15,14 +15,14 @@ process.on( 'exit', function() {
 function createWebhookService( app, properties ) {
     app.post( '/webhook', upload.array(), function( req, res, next ) {
         const event = req.headers['x-github-event'];
-        const signature = req.headers['x-hub-Signature'];
+        const signature = req.headers['x-hub-signature'];
         const deliveryId = req.headers['x-github-delivery'];
         const contentType = req.headers['content-type'];
         var content = req.body;
 
         try {
             validateWebhookRequestFormat( event, contentType );
-            computeAndValidateSignature( properties.secret, content.toString(), signature );
+            computeAndValidateSignature( properties.webhookSecret, content.toString(), signature );
 
             res.statusCode = 200;
             res.end();
@@ -50,8 +50,8 @@ function validateWebhookRequestFormat( event, contentType ) {
     }
 }
 
-function computeAndValidateSignature( key, content, signature ) {
-    const hmac = crypto.createHmac( 'sha1', key ).update( content ).digest( 'hex' );
+function computeAndValidateSignature( secret, content, signature ) {
+    const hmac = crypto.createHmac( 'sha1', secret ).update( content ).digest( 'hex' );
     const isValidSignature = 'sha1=' + hmac === signature;
 
     if( !isValidSignature ) {
