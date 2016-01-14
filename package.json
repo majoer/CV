@@ -3,7 +3,7 @@
     "preprocess:autoprefixer": "postcss --use autoprefixer -o src/web/static/bundle.css src/web/static/bundle.css",
     "build-css": "lessc src/web/less/style.less src/web/static/bundle.css && npm run preprocess:autoprefixer",
     "build-js": "webpack",
-    "build": "build-js & build-css",
+    "build": "npm run build-js & npm run build-css",
     "watch-css": "nodemon -q -I -w src/web/less --ext less --exec npm run build-css",
     "watch-js": "webpack -w",
     "rest": "node src/server.js",
