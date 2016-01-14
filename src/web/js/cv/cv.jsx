@@ -3,7 +3,7 @@ import Component from 'omniscient';
 import Get from '../data-request';
 import PersonaliaColumn from './personaliaColumn.jsx';
 import CVTopic from './cvTopic.jsx';
-import SimpleCVTopic from './SimpleCVTopic.jsx';
+import SimpleCVTopic from './simpleCVTopic.jsx';
 import {CVWorkEntry, CVEducationEntry, CVProjectEntry, CVSkillsEntry, CVInterestsEntry} from './cvEntry.jsx';
 
 const ReactCV = Component('ReactCV', ({cursor}) => {
