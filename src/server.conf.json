@@ -1,7 +1,7 @@
 {
     "port": 8081,
 
-    "webhookServiceEnabled": true,
+    "webhookServiceEnabled": false,
     "webhookSecret": "enterYourSecretHere",
     "tlsPort": 8082,
     "keyFile": "yourKeyfilePathHere",
