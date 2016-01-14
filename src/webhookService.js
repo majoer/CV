@@ -52,7 +52,7 @@ function validateWebhookRequestFormat( event, contentType ) {
 
 function computeAndValidateSignature( secret, content, signature ) {
     const contentString = JSON.stringify( content );
-    const hmac = crypto.createHmac( 'sha1', secret ).update( contentString );
+    const hmac = crypto.createHmac( 'sha1', secret ).update( contentString, 'utf-8' );
     const computedSignature = 'sha1=' + hmac.digest( 'hex' );
     const isValidSignature = computedSignature === signature;
 
