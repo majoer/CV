@@ -22,7 +22,7 @@ function createWebhookService( app, properties ) {
 
         try {
             validateWebhookRequestFormat( event, contentType );
-            computeAndValidateSignature( properties.webhookSecret, content.toString(), signature );
+            computeAndValidateSignature( properties.webhookSecret, content, signature );
 
             res.statusCode = 200;
             res.end();
@@ -51,8 +51,10 @@ function validateWebhookRequestFormat( event, contentType ) {
 }
 
 function computeAndValidateSignature( secret, content, signature ) {
-    const hmac = crypto.createHmac( 'sha1', secret ).update( content ).digest( 'hex' );
-    const isValidSignature = 'sha1=' + hmac === signature;
+    const contentString = JSON.stringify( content );
+    const hmac = crypto.createHmac( 'sha1', secret ).update( contentString );
+    const computedSignature = 'sha1=' + hmac.digest( 'hex' );
+    const isValidSignature = computedSignature === signature;
 
     if( !isValidSignature ) {
         throw "Signature did not match";
