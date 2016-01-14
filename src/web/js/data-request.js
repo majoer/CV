@@ -1,7 +1,5 @@
-import request from 'qwest';
+import qwest from 'qwest';
 import Immutable from 'immutable';
-
-const context = request.getContextPath();
 
 function get( cursor, apiCall ) {
 
@@ -10,7 +8,7 @@ function get( cursor, apiCall ) {
         return;
     }
 
-    request.get( context + apiCall ).then( function( xhr, response ) {
+    qwest.get( apiCall ).then( function( xhr, response ) {
 
         cursor.update( () => Immutable.fromJS( response ) );
     }).catch( function( xhr, response, error ) {
@@ -27,7 +25,7 @@ function handleError(cursor, xhr, response, error) {
     writeErrorToCursor( cursor, error);
 }
 
-function writeErrorToCursor( cursor, error, ) {
+function writeErrorToCursor( cursor, error ) {
     cursor.update( () => Immutable.fromJS( {
         error: error
     }));
