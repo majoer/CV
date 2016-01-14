@@ -7,12 +7,14 @@ import SimpleCVTopic from './simpleCVTopic.jsx';
 import {CVWorkEntry, CVEducationEntry, CVProjectEntry, CVSkillsEntry, CVInterestsEntry} from './cvEntry.jsx';
 
 const ReactCV = Component('ReactCV', ({cursor}) => {
+
     if (cursor.size == null) {
-        Get(cursor, 'http://localhost:8081/cv');
+        Get(cursor, '/cv');
         return <p>Laster inn CV</p>;
     } else if (cursor.get('error') != null) {
         return <p>En feil oppstod under henting av CV</p>;
     }
+
     const totalTopics = 4;
 
     const educationTopic = (table, entry) => {
