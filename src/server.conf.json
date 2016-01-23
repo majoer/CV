@@ -1,9 +1,0 @@
-{
-    "port": 8081,
-
-    "webhookServiceEnabled": false,
-    "webhookSecret": "enterYourSecretHere",
-    "tlsPort": 8082,
-    "keyFile": "yourKeyfilePathHere",
-    "certFile": "yourCertificateFilePathHere"
-}

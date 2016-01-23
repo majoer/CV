@@ -1,91 +1,61 @@
-const createWebhookService = require( './webhookService.js' );
-const createCVService = require( './cvService.js' );
-const bodyParser = require( 'body-parser' );
 const express = require( 'express' );
 const https = require( 'https' );
 const fs = require( 'fs' );
 
-/*
-* Initialization HTTP
-*/
+function Server ( properties, specifyStaticContent, specifyServices ) {
 
-var properties = readProperties();
-var httpServer;
-const app = express();
+    const propertiesIsObjet = typeof properties === 'object';
+    const specifyStaticContentIsFunction = typeof specifyStaticContent === 'function';
+    const specifyServicesIsFunction = typeof specifyServices === 'function';
 
-/*
-* Configuration
-*/
+    if ( !(propertiesIsObjet && specifyStaticContentIsFunction && specifyServicesIsFunction) ) {
+        throw "Illegal Argument Exception";
+    }
 
-app.use( express.static( 'src/web/static' ) );
+    this.app = express();
+    this.server = undefined;
 
-/*
-* Services
-*/
+    this.hasStaticContent = specifyStaticContent( this.app );
+    this.hasServices = specifyServices( this.app );
 
-createCVService( app );
+    if( !(this.hasStaticContent || this.hasServices ) ) {
+        throw "No Content Or Services Exception";
+    }
+}
 
-/*
-* Start Server
-*/
+function HttpServer( properties, specifyUses, specifyServices ) {
+    Server.call( this, properties, specifyUses, specifyServices );
 
-httpServer = startHttpServer( properties.port );
+    const that = this;
 
-/*
-* Support methods
-*/
-
-function startHttpServer( port ) {
-    return app.listen( port, function( req, res ) {
-        var host = httpServer.address().address
-        var port = httpServer.address().port;
+    this.server = this.app.listen( properties.port, function( req, res ) {
+        var host = that.server.address().address
+        var port = that.server.address().port;
         console.log( "Started service at http://%s:%s", host, port );
     });
 }
 
-function readProperties() {
-    var fileContents = fs.readFileSync( __dirname + '/server.conf.json');
-    return JSON.parse( fileContents );
+function HttpsServer( properties, specifyUses, specifyServices, tlsProperties ) {
+    Server.call( this, properties, specifyUses, specifyServices );
+
+    const that = this;
+    const keyFile = fs.readFileSync( tlsProperties.keyFile );
+    const certFile = fs.readFileSync( tlsProperties.certFile );
+    const options = {
+        key: keyFile,
+        cert: certFile
+    };
+
+    this.app.use( bodyParser.json() );
+    this.server = https.createServer( options, this.app )
+    .listen( properties.tlsPort, function( req, res ) {
+        const host = that.server.address().address
+        const port = that.server.address().port;
+        console.log( "Started service at https://%s:%s", host, port );
+    });
 }
 
-if( properties.webhookServiceEnabled ) {
-
-    /*
-    * Initialization HTTPS
-    */
-
-    const secureApp = express();
-    var httpsServer;
-
-    /*
-    * Configuration
-    */
-
-    secureApp.use( bodyParser.json() );
-
-    /*
-    * Services
-    */
-    createWebhookService( secureApp, properties );
-
-    /*
-    * Start Server
-    */
-
-    createAndStartHttpsServer( properties.tlsPort, properties.keyFile, properties.certFile);
-
-    /*
-    * Support methods
-    */
-
-    function createAndStartHttpsServer ( sslPort, keyFile, certFile ) {
-        httpsServer = https.createServer( {
-            key: fs.readFileSync( keyFile ),
-            cert: fs.readFileSync( certFile )
-        }, secureApp).listen(sslPort, function( req, res ) {
-            var host = httpsServer.address().address
-            var port = httpsServer.address().port;
-            console.log( "Started service at https://%s:%s", host, port );
-        });
-    }
+module.exports = {
+    HttpServer: HttpServer,
+    HttpsServer: HttpsServer
 }
