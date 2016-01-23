@@ -26,7 +26,7 @@ fi
 
 echo "${ENVIRONMENT} environment detected"
 
-if [ ENVIRONMENT == "Cygwin"]; then
+if [ ENVIRONMENT == "Cygwin" ]; then
     echo "Converting win pid to cygwin pid"
     PARENT_PID=$(ps aux | awk '{print $1, $4}' | grep $PARENT_PID | awk '{print $1}')
 fi
@@ -62,4 +62,4 @@ echo 'Building Front-End'
 npm run build
 
 echo 'Starting server'
-node src/server.js
+node src/main.js
