@@ -36,6 +36,7 @@ const PersonaliaColumn = Component('PersonaliaColumn', ({cursor}) => {
 
             <div className="personaliaColumn-socialNetworks">
                 <SocialNetwork cursor={socialNetworks.find((o) => o.get('name') == "Github")} imgUrl="img/github.png"/>
+                <p>Nettsiden er under konstuksjon</p>
             </div>
         </div>;
     </div>
