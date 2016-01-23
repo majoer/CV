@@ -3,8 +3,8 @@ const createCVService = require( './cvService.js' );
 const bodyParser = require( 'body-parser' );
 const express = require( 'express' );
 const fs = require( 'fs' );
-const HttpServer = require ( './t.js' ).HttpServer;
-const HttpsServer = require ( './t.js' ).HttpsServer;
+const HttpServer = require ( './server.js' ).HttpServer;
+const HttpsServer = require ( './server.js' ).HttpsServer;
 
 const properties = readProperties( 'server.conf.json' );
 const tlsProperties = readProperties( 'tls.conf.json' );
