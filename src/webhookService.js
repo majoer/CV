@@ -63,7 +63,7 @@ function computeAndValidateSignature( secret, content, signature ) {
 
 function pullFromMasterAndStartServer() {
     const pid = process.pid;
-    spawn( "sh", ['sh/pull_from_master_and_start_server.sh', pid], {
+    spawn( "bash", ['sh/pull_from_master_and_start_server.sh', pid], {
         detached: true,
         stdio: ['ignore', 'inherit', 'inherit']
      })
