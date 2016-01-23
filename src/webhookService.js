@@ -34,8 +34,8 @@ function createWebhookService( app, properties ) {
 
 
         } catch( ex ) {
-            const error = 'An error occurred while processing webhook request:\n' + ex;
-            console.log( error );
+            const error = 'An error occurred while processing webhook request';
+            console.log( error + ":\n" + ex);
             res.statusCode = 400;
             res.end( error );
         }

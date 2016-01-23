@@ -16,6 +16,7 @@ function Server ( properties, specifyStaticContent, specifyServices ) {
     this.app = express();
     this.server = undefined;
 
+    this.app.use( bodyParser.json() );
     this.hasStaticContent = specifyStaticContent( this.app );
     this.hasServices = specifyServices( this.app );
 
@@ -47,7 +48,6 @@ function HttpsServer( properties, specifyUses, specifyServices, tlsProperties ) 
         cert: certFile
     };
 
-    this.app.use( bodyParser.json() );
     this.server = https.createServer( options, this.app )
     .listen( properties.tlsPort, function( req, res ) {
         const host = that.server.address().address
