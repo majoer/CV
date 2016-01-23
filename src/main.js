@@ -33,7 +33,7 @@ function specifyHttpServices( app ) {
 function specifyHttpsServices( app ) {
 
     if( properties.webhookServiceEnabled ) {
-        createWebhookService( app );
+        createWebhookService( app, tlsProperties );
     }
 
     return properties.webhookServiceEnabled;
