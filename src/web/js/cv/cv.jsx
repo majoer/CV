@@ -1,6 +1,6 @@
 import React from 'react';
 import Component from 'omniscient';
-import Get from '../data-request';
+import Get from '../data-request.js';
 import PersonaliaColumn from './personaliaColumn.jsx';
 import CVTopic from './cvTopic.jsx';
 import SimpleCVTopic from './simpleCVTopic.jsx';
