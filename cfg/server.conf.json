@@ -1,5 +1,5 @@
 {
     "port": 8081,
     "tlsPort": 8082,
-    "webhookServiceEnabled": false
+    "webhookServiceEnabled": true
 }
