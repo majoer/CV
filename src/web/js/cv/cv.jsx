@@ -18,23 +18,23 @@ const ReactCV = Component('ReactCV', ({cursor}) => {
     const totalTopics = 4;
 
     const educationTopic = (table, entry) => {
-      table.push(<CVEducationEntry cursor={entry}/>);
+      table.push(<CVEducationEntry key={entry} cursor={entry}/>);
     };
 
     const workTopic = (table, entry) => {
-      table.push(<CVWorkEntry cursor={entry}/>);
+      table.push(<CVWorkEntry key={entry}  cursor={entry}/>);
     };
 
     const projectTopic = (table, entry) => {
-      table.push(<CVProjectEntry cursor={entry}/>);
+      table.push(<CVProjectEntry key={entry}  cursor={entry}/>);
     };
 
     const skillsEntry = (table, entry) => {
-      table.push(<CVSkillsEntry cursor={entry}/>);
+      table.push(<CVSkillsEntry key={entry}  cursor={entry}/>);
     };
 
     const interestsEntry = (table, entry) => {
-      table.push(<CVInterestsEntry cursor={entry}/>);
+      table.push(<CVInterestsEntry key={entry}  cursor={entry}/>);
     };
 
     const tmp = <CVTopic handleEntry={interestsEntry} size={3} cursor={cursor.cursor(['profile', 'interests'])} image="img/comments.png"/>
