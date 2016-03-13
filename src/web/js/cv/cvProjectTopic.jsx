@@ -14,12 +14,12 @@ const CVProjectTopic = Component('CVTopic', ({cursor, className, title, image, s
       tableData.push(
         <tr key={i}>
             <td><CVEntry cursor={entry}/></td>
-            <td className="cv-body-entry-description"><div>{entry.get('descriptions')}</div></td>
+            <td className="entry-description"><div>{entry.get('descriptions')}</div></td>
        </tr>);
     }
   });
 
-    return <div className={'cv-body-topic ' + className}>
+    return <div className={'topic ' + className}>
         <CVHeader image={image}/>
         <table>
           <tbody>

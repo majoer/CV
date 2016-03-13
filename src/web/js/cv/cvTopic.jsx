@@ -17,7 +17,7 @@ const CVTopic = Component('CVTopic', ({cursor, className, title, image, size, he
   });
 
 
-    return <div className={'cv-body-topic ' + className} style={{height: height}}>
+    return <div className={'topic ' + className} style={{height: height}}>
         <CVHeader image={image}/>
         <table>
           <tbody>

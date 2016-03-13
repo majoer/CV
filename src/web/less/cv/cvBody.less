@@ -3,81 +3,92 @@
 
 
 .cv-body {
-  position: absolute;
-  left: 300px;
-  top: 0;
-  width: 600px;
-  height: 100%;
-  overflow: hidden;
-  word-wrap: break-word;
-  // box-sizing: border-box;
-  // border: 1px solid black;
-}
+    height: 100%;
+    width: 100%;
 
 
-.cv-body-topic {
-  width: 100%;
-  // height: 33%;
-  margin-bottom: 2em;
-}
+    .bod {
+        margin-left: @mobile-min;
+        padding-left: 30px;
+        float: left;
 
-.cv-body-topic-first {
-  margin-top: 1em;
-}
+        word-wrap: break-word;
+        word-break: break-all;
+        min-width: @mobile-min;
+        width: 50%;
+        @media(max-width: @mobile) {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    }
 
-.cv-body-topic-work {
-  // height: 35%;
-}
+  .topic {
+    width: 100%;
+    // height: 33%;
+    margin-bottom: 2em;
+  }
 
-.cv-body-topic-education {
-  // height: 15%;
-}
+  .topic-first {
+    margin-top: 1em;
+  }
 
-.cv-body-topic-projects {
-  // height: 20%;
-}
+  .topic-work {
+    // height: 35%;
+  }
 
-.cv-body-simpleTopic {
-  width: 130px;
-  float: left;
-  margin-right: 30px;
-}
-.cv-body-simpleTopic h2 {
-  vertical-align: top;
-  padding-top: 0;
-  margin-top: 0;
-}
-.cv-body-simpleTopic ul {
-  margin-left: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
-.cv-body-simpleTopic li {
-  overflow: hidden;
-  word-wrap: normal;
-  text-overflow: ellipsis;
-}
-.cv-body-entry {
-  width: 160px;
-  margin-right: 45px;
-  // box-sizing: border-box;
-  // border: 1px solid red;
-}
-.cv-body-entry-title {
-  padding: 0;
-  margin: 0;
-}
-.cv-body-entry-org {
-  padding: 0;
-  margin: 0;
-  color: #A6C634;
-}
-.cv-body-entry-city {}
-.cv-body-entry-date {}
-.cv-body-entry-description {
-  height: 100%;
-  width: 100%;
-  vertical-align: top;
-  // box-sizing: border-box;
-  // border: 1px solid black;
+  .topic-education {
+    // height: 15%;
+  }
+
+  .topic-projects {
+    // height: 20%;
+  }
+
+  .simpleTopic {
+    width: 130px;
+    float: left;
+    margin-right: 30px;
+  }
+  .simpleTopic h2 {
+    vertical-align: top;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .simpleTopic ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .simpleTopic li {
+    overflow: hidden;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+  }
+  .entry {
+    width: 160px;
+    margin-right: 45px;
+    // box-sizing: border-box;
+    // border: 1px solid red;
+  }
+  .entry-title {
+    padding: 0;
+    margin: 0;
+  }
+  .entry-org {
+    padding: 0;
+    margin: 0;
+    color: #A6C634;
+  }
+  .entry-city {}
+  .entry-date {}
+  .entry-description {
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+    // box-sizing: border-box;
+    // border: 1px solid black;
+  }
+
+
 }

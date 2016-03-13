@@ -49,7 +49,6 @@ function readProperties( fileName ) {
         return JSON.parse( fileContents );
     } catch( ex ) {
         console.log( 'An error occurred while reading file: ' + fileName );
-        throw ex;
     }
 }
 

@@ -3,11 +3,11 @@ import Component from 'omniscient';
 
 export const CVHeader = Component('CVHeader', ({image}) => {
 
-    return <div className="cv-body-header">
-        <div className="cv-body-header-icon">
+    return <div className="header">
+        <div className="header-icon">
             <img src={image} width="40px" height="40px"/>
         </div>
-        <div className="cv-body-header-line"/>
+        <div className="header-line"/>
     </div>
 });
 

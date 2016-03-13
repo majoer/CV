@@ -15,7 +15,7 @@ const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className, i
       });
 
       result.push(
-        <div className="cv-body-simpleTopic" key={'list' + i}>
+        <div className="simpleTopic" key={'list' + i}>
           <h2 key={'h2' + i}>{title.capitalizeFirstLetter()}</h2>
           <ul>
             {list}
@@ -25,7 +25,7 @@ const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className, i
     return <div className={className}>
         <CVHeader image={image}/>
         {result}
-    </div>;
+    </div>
 });
 
 export default SimpleCVTopic;
