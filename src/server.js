@@ -40,6 +40,10 @@ function HttpServer( properties, specifyUses, specifyServices ) {
 function HttpsServer( properties, specifyUses, specifyServices, tlsProperties ) {
     Server.call( this, properties, specifyUses, specifyServices );
 
+    if(typeof tlsProperties !== 'object') {
+        throw "Illegal Argument Exception";
+    }
+
     const that = this;
     const keyFile = fs.readFileSync( tlsProperties.keyFile );
     const certFile = fs.readFileSync( tlsProperties.certFile );

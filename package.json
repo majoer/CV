@@ -7,7 +7,7 @@
     "watch-css": "nodemon -q -I -w src/web/less --ext less --exec npm run build-css",
     "watch-js": "webpack -w",
     "main": "node src/main.js",
-    "watch": "npm run rest & npm run watch-js & npm run watch-css",
+    "watch": "npm run main & npm run watch-js & npm run watch-css",
     "watch-cyg": "cygstart npm run main & cygstart npm run watch-js & cygstart npm run watch-css"
   },
   "name": "cv",
