@@ -39,7 +39,7 @@
             "level": "Sterk skriftlig og muntlig"
         } ],
         "licences": [ "B, A2" ],
-        "interests": ["E-Sports", "Weightlifting", "Music"]
+        "interests": ["E-Sport", "Vektløfting", "Musikk", "Snowboard"]
     },
     "key_qualifications": "Hardtarbeidende, pålitelig og tilpasningsdyktig dataingeniør med gode kunnskaper innen systemutvikling med Java, databasedesign, nettverksarkitektur og -design. Spesialisert i systemutvikling av tjenester gjennom brukersentrert design.",
     "knowledge": [ {
@@ -68,6 +68,7 @@
         "desc": "Selvadapterende systemer, programvare- og informasjonssikkerhet."
     } ],
     "skills": [
+        
     ],
     "software": [
         "NetBeans",

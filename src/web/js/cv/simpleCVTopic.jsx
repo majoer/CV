@@ -8,15 +8,15 @@ const SimpleCVTopic = Component('SimpleCVTopic', ({cursor, extract, className, i
 
   const result = [];
 
-    extract.forEach((title, i) => {
+    extract.forEach((topic, i) => {
       const list = [];
-      cursor.get(title).forEach((entry, j) => {
+      cursor.get(topic.cursor).forEach((entry, j) => {
         list.push(<li key={j}>{entry}</li>);
       });
 
       result.push(
         <div className="simpleTopic" key={'list' + i}>
-          <h2 key={'h2' + i}>{title.capitalizeFirstLetter()}</h2>
+          <h2 key={'h2' + i}>{topic.name}</h2>
           <ul>
             {list}
           </ul>
